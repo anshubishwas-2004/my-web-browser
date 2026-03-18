@@ -21,8 +21,6 @@
 
 ## 📸 Preview
 
-> *(Add a screenshot here for maximum impact)*
-
 ```
 /public/screenshot.png
 ```
