@@ -1,16 +1,35 @@
 # 🌐 My Web Browser
 
-A simple web browser application built with **Node.js**, **Express.js**, **HTML**, and **CSS**.
+> A sleek, minimal web browser built using Node.js and Express that lets you surf the web inside your own app.
 
-## Features
+![Node.js](https://img.shields.io/badge/Node.js-18+-green?style=for-the-badge\&logo=node.js)
+![Express](https://img.shields.io/badge/Express.js-Backend-black?style=for-the-badge\&logo=express)
+![Frontend](https://img.shields.io/badge/Frontend-HTML%2FCSS%2FJS-blue?style=for-the-badge\&logo=javascript)
 
-- Enter any URL and load the webpage inside the app
-- Works with HTML pages, JSON, plain text, and PDFs
-- Handles invalid URLs with clear error messages
-- Strips security headers that block iframe rendering
-- Auto-prepends `https://` if no protocol is given
+---
 
-## Project Structure
+## ✨ Features
+
+🚀 Load any website inside your app
+🔗 Supports HTML, JSON, text, and PDFs
+⚡ Smart URL handling (auto-adds `https://`)
+🛡️ Bypasses iframe restrictions (X-Frame-Options, CSP)
+❌ Clean error handling for invalid URLs
+🎨 Modern and responsive UI
+
+---
+
+## 📸 Preview
+
+> *(Add a screenshot here for maximum impact)*
+
+```
+/public/screenshot.png
+```
+
+---
+
+## 🏗️ Project Structure
 
 ```
 my-browser/
@@ -22,12 +41,15 @@ my-browser/
     └── app.js        # Frontend logic
 ```
 
-## Getting Started
+---
 
-### Prerequisites
-- [Node.js](https://nodejs.org/) v14+
+## ⚙️ Getting Started
 
-### Installation
+### 🔧 Prerequisites
+
+* Node.js (v14 or higher)
+
+### 📥 Installation
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
@@ -35,28 +57,59 @@ cd YOUR_REPO_NAME
 npm install
 ```
 
-### Run
+### ▶️ Run the App
 
 ```bash
 npm start
 ```
 
-Then open [http://localhost:3000](http://localhost:3000) in your browser.
+Now open 👉 **http://localhost:3000**
 
-## How It Works
+---
 
-1. User enters a URL and clicks **Go**
-2. Frontend sends the URL to `/check` for validation
-3. The iframe loads `/proxy?url=...` which fetches the page server-side
-4. The server strips iframe-blocking headers (`X-Frame-Options`, `CSP`, etc.), injects a `<base>` tag for relative URLs, and returns the page
-5. The page renders inside the iframe
+## 🧠 How It Works
 
-## Tech Stack
+1. User enters a URL
+2. Frontend sends request to `/check`
+3. Server validates and processes the URL
+4. `/proxy` fetches the webpage using Axios
+5. Security headers are stripped
+6. `<base>` tag is injected for proper routing
+7. Page renders inside an iframe
 
-- **Backend:** Node.js, Express, Axios
-- **Frontend:** HTML, CSS, Vanilla JavaScript
+---
 
-## Known Limitations
+## ⚠️ Limitations
 
-- Some sites (Google, Facebook, Amazon) actively block proxy requests and will return a 403
-- JavaScript-heavy SPAs may not render fully due to cross-origin API restrictions
+* ❌ Some websites (Google, Facebook, Amazon) block proxy access
+* ⚠️ JavaScript-heavy apps (SPA) may not fully load
+* 🔒 Cross-origin API restrictions still apply
+
+---
+
+## 🚀 Future Improvements
+
+* 🔍 Add search engine support (Google/Bing fallback)
+* ⭐ Bookmark system
+* 🕘 Browsing history
+* 🧑‍💻 Developer tools panel
+* 🌙 Dark mode toggle
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome!
+If you find bugs or have ideas, feel free to open an issue.
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 💡 Author
+
+Made by **Anshu Bishwas**
